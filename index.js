@@ -15,8 +15,35 @@ const message = document.getElementById('message')
 function renderGames() {
     gameList.innerHTML = " "
 
-    games.forEach((game) => {
-        const li = document.createElement('li')
-        
+    games.forEach(function(game) {
+        const li = document.createElement('li');
+
+        if (game.borrower === null) {
+            li.textContent = game.title + "· " + game.players + "игрока · свободна "
+        } else {
+            li.textContent = game.title + "· " + game.players + "игрока · У  " + game.borrower
+        }
+        gameList.append(li)
     });
 }
+renderGames()
+
+borrowButton.addEventListener("click", () => {
+    const name = borrowerName.value.trim 
+    if (name === "") {
+        message.textContent = "Введите имя"
+        return
+    } 
+   const index = Number(gameSelect.value)
+   const game = games[index]
+
+   if (game.borrower !== null) {
+      message.textContent = "Игра уже выдана"
+      return
+   }
+
+   game.borrower = name
+   message.textContent = "Игра выдана"
+
+   renderGames()
+})
