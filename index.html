@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Прокат настольных игр</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-     <h1>Прокат настольных игр</h1>
-<ul id="gameList"></ul>
-
-<label for="gameSelect">Игра</label>
-<select id="gameSelect">
-  <option value="0">Каркассон</option>
-  <option value="1">Доббль</option>
-  <option value="2">Шахматы</option>
-</select>
-
-<label for="borrowerName">Имя посетителя</label>
-<input id="borrowerName" type="text">
-<button id="borrowButton" type="button">Выдать</button>
-<button id="returnButton" type="button">Вернуть</button>
-<p id="message"></p>
+    <div class="container">
+        <h1>Прокат настольных игр</h1>
+        <input type="checkbox" id="onlyFree">
+        <label for="onlyFree">Только свободные</label>
+        <ul id="gameList"></ul>
+        <h2>Выдача и возврат игры</h2>
+        <label>Игра</label>
+        <select id="gameSelect"></select>
+        <button id="addCopyButton">Добавить копию</button>
+        <label>Имя посетителя</label>
+        <input type="text" id="borrowerName" placeholder="Введите имя">
+        <button id="borrowButton">Выдать</button>
+        <button id="returnButton">Вернуть</button>
+        <p id="message"></p>
+        <hr>
+        <h2>Добавить игру</h2>
+        <label>Название игры</label>
+        <input type="text" id="gameTitle" placeholder="Название игры">
+        <label>Число игроков</label>
+        <input type="number" id="gamePlayers" min="1" step="1" placeholder="Число игроков">
+        <label>Количество копий</label>
+        <input type="number" id="gameCopies" placeholder="Количество копий">
+        <button id="addGameButton">Добавить игру</button>
+    </div>
 </body>
 </html>

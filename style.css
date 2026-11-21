@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5fc;
+    color: #454052;
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 16px;
+    background-color: rgb(0, 0, 0);
+    border-top: 6px solid #b9a5df;
+    box-shadow: 0 10px 30px rgba(255, 156, 252, 0.8);
+}
+h1 {
+    text-align: center;
+    color: #b477a0;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+h2 {
+    font-size: 19px;
+    color: #a17ab5;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+#onlyFree {
+    accent-color: #a98bc9;
+    cursor: pointer;
+}
+label {
+    color: #a17ab5;
+    cursor: pointer;
+}
+#gameList {
+    padding: 15px;
+    background-color: #f8f0f8;
+    border-radius: 12px;
+    list-style-type: none;
+    margin-bottom: 25px;
+    border-left: 4px solid #b9a5df;
+}
+#gameList li {
+    padding: 10px;
+    border-bottom: 1px dashed #dfc5dc;
+    font-size: 15px;
+}
+#gameList li:last-child {
+    border-bottom: none;
+}
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 7px 0;
+    border: 2px solid #e1d5ed;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #fcfaff;
+    color: #454052;
+    box-sizing: border-box;
+}
+button {
+    padding: 11px 17px;
+    margin: 7px 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #a98bc9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #9272b5;
+}
+#returnButton {
+    background-color: #d58eaf;
+}
+#returnButton:hover {
+    background-color: #c4779c;
+}
+#addGameButton {
+    background-color: #d58eaf;
+}
+#addGameButton:hover {
+    background-color: #c4779c;
+}
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #a98bc9;
+    min-height: 20px;
+}
